@@ -5,7 +5,8 @@ import App from './App'
 describe('App', () => {
   it('renders the hero headline', () => {
     render(<App />)
-    expect(screen.getByText(/actionable intelligence/)).toBeInTheDocument()
+    const matches = screen.getAllByText(/production-ready AI/)
+    expect(matches.length).toBeGreaterThan(0)
   })
 
   it('renders the landing section', () => {
@@ -22,5 +23,20 @@ describe('App', () => {
     render(<App />)
     const logos = screen.getAllByText('MosaiqLabs')
     expect(logos.length).toBeGreaterThan(0)
+  })
+
+  it('renders the security section', () => {
+    render(<App />)
+    expect(document.getElementById('security')).toBeInTheDocument()
+  })
+
+  it('renders the FAQ section', () => {
+    render(<App />)
+    expect(document.getElementById('faq')).toBeInTheDocument()
+  })
+
+  it('renders the testimonials section', () => {
+    render(<App />)
+    expect(document.getElementById('testimonials')).toBeInTheDocument()
   })
 })
