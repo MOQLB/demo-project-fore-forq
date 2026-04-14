@@ -5,7 +5,7 @@ import App from './App'
 describe('App', () => {
   it('renders the hero headline', () => {
     render(<App />)
-    const matches = screen.getAllByText(/production-ready AI/)
+    const matches = screen.getAllByText(/actionable intelligence/)
     expect(matches.length).toBeGreaterThan(0)
   })
 
@@ -25,6 +25,11 @@ describe('App', () => {
     expect(logos.length).toBeGreaterThan(0)
   })
 
+  it('renders the ecosystem section', () => {
+    render(<App />)
+    expect(document.getElementById('ecosystem')).toBeInTheDocument()
+  })
+
   it('renders the security section', () => {
     render(<App />)
     expect(document.getElementById('security')).toBeInTheDocument()
@@ -38,5 +43,15 @@ describe('App', () => {
   it('renders the testimonials section', () => {
     render(<App />)
     expect(document.getElementById('testimonials')).toBeInTheDocument()
+  })
+
+  it('renders the why-mosaiqlabs comparison section', () => {
+    render(<App />)
+    expect(document.getElementById('why-mosaiqlabs')).toBeInTheDocument()
+  })
+
+  it('renders the trusted-by section', () => {
+    render(<App />)
+    expect(document.getElementById('trusted-by')).toBeInTheDocument()
   })
 })
