@@ -1,6 +1,9 @@
 import '../App.css'
+import { useTheme } from '../context/ThemeContext'
 
 function Home() {
+  const { theme, toggleTheme } = useTheme()
+
   return (
     <>
       <section id="landing">
@@ -12,6 +15,14 @@ function Home() {
             <a href="#industries">Industries</a>
             <a href="#security">Security</a>
             <a href="#faq">FAQ</a>
+            <button
+              className="theme-toggle"
+              onClick={toggleTheme}
+              aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
+              title={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
+            >
+              {theme === 'dark' ? '\u2600\uFE0F' : '\uD83C\uDF19'}
+            </button>
             <a href="#cta" className="nav-cta">Get Started</a>
           </div>
         </nav>
