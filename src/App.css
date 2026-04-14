@@ -138,6 +138,47 @@
   margin-top: 4px;
 }
 
+/* ── Trusted By ────────────────────────────────────── */
+#trusted-by {
+  background: #000;
+  padding: 48px 48px;
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.trusted-label {
+  font-size: 0.85rem;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 500;
+  margin-bottom: 28px;
+}
+
+.trusted-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 48px;
+  flex-wrap: wrap;
+}
+
+.trusted-logo-item {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #374151;
+  letter-spacing: 0.5px;
+  padding: 8px 20px;
+  border: 1px solid #1f2937;
+  border-radius: 8px;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.trusted-logo-item:hover {
+  color: #9ca3af;
+  border-color: #374151;
+}
+
 /* ── Buttons ────────────────────────────────────────── */
 .btn {
   display: inline-block;
@@ -178,8 +219,10 @@
 
 /* ── Sections (shared) ──────────────────────────────── */
 #features,
+#ecosystem,
 #industries,
 #how-it-works,
+#why-mosaiqlabs,
 #security,
 #testimonials,
 #faq,
@@ -249,17 +292,65 @@
   font-size: 0.95rem;
 }
 
-/* ── Industries ─────────────────────────────────────── */
-#industries {
+/* ── Ecosystem ─────────────────────────────────────── */
+#ecosystem {
   background: #000;
 }
 
-#industries .section-title {
+#ecosystem .section-title {
   color: #fff;
 }
 
-.industries-subtitle {
+.ecosystem-subtitle {
   color: #9ca3af;
+}
+
+.ecosystem-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.ecosystem-card {
+  border: 1px solid #1f2937;
+  border-radius: 16px;
+  padding: 36px 28px;
+  text-align: left;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.ecosystem-card:hover {
+  border-color: #7c3aed;
+  background: rgba(124, 58, 237, 0.05);
+}
+
+.ecosystem-icon {
+  font-size: 2rem;
+  margin-bottom: 12px;
+}
+
+.ecosystem-card h3 {
+  color: #fff;
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin: 0 0 8px;
+}
+
+.ecosystem-card p {
+  color: #9ca3af;
+  line-height: 1.6;
+  font-size: 0.9rem;
+}
+
+/* ── Industries ─────────────────────────────────────── */
+#industries {
+  background: var(--bg);
+}
+
+.industries-subtitle {
+  color: var(--text);
 }
 
 .industries-grid {
@@ -276,33 +367,43 @@
 }
 
 .industry-card {
-  border: 1px solid #1f2937;
+  background: var(--code-bg);
+  border: 1px solid var(--border);
   border-radius: 16px;
   padding: 36px 28px;
   text-align: left;
-  transition: border-color 0.2s;
+  transition: border-color 0.2s, transform 0.2s;
 }
 
 .industry-card:hover {
   border-color: #7c3aed;
+  transform: translateY(-2px);
 }
 
 .industry-card h3 {
-  color: #fff;
+  color: var(--text-h);
   font-size: 1.15rem;
   font-weight: 600;
   margin: 0 0 8px;
 }
 
 .industry-card p {
-  color: #9ca3af;
+  color: var(--text);
   line-height: 1.6;
   font-size: 0.9rem;
 }
 
 /* ── How It Works ───────────────────────────────────── */
 #how-it-works {
-  background: var(--bg);
+  background: #000;
+}
+
+#how-it-works .section-title {
+  color: #fff;
+}
+
+#how-it-works .section-subtitle {
+  color: #9ca3af;
 }
 
 .steps {
@@ -346,19 +447,109 @@
 .step h3 {
   font-size: 1.1rem;
   font-weight: 600;
-  color: var(--text-h);
+  color: #fff;
   margin: 0 0 8px;
 }
 
 .step p {
-  color: var(--text);
+  color: #9ca3af;
   line-height: 1.6;
   font-size: 0.9rem;
 }
 
+/* ── Why MosaiqLabs (Comparison) ──────────────────── */
+#why-mosaiqlabs {
+  background: var(--bg);
+}
+
+.comparison-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  max-width: 900px;
+  margin: 48px auto 0;
+}
+
+.comparison-card {
+  border-radius: 16px;
+  padding: 40px 36px;
+}
+
+.comparison-card h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0 0 20px;
+}
+
+.comparison-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.comparison-card li {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  padding-left: 28px;
+  position: relative;
+}
+
+.comparison-card li::before {
+  position: absolute;
+  left: 0;
+  font-size: 1rem;
+}
+
+.comparison-before {
+  background: rgba(239, 68, 68, 0.06);
+  border: 1px solid rgba(239, 68, 68, 0.15);
+}
+
+.comparison-before h3 {
+  color: #ef4444;
+}
+
+.comparison-before li {
+  color: var(--text);
+}
+
+.comparison-before li::before {
+  content: '\2717';
+  color: #ef4444;
+}
+
+.comparison-after {
+  background: rgba(124, 58, 237, 0.06);
+  border: 1px solid rgba(124, 58, 237, 0.2);
+}
+
+.comparison-after h3 {
+  color: #a78bfa;
+}
+
+.comparison-after li {
+  color: var(--text);
+}
+
+.comparison-after li::before {
+  content: '\2713';
+  color: #7c3aed;
+}
+
 /* ── Security ──────────────────────────────────────── */
 #security {
-  background: var(--bg);
+  background: #000;
+}
+
+#security .section-title {
+  color: #fff;
+}
+
+#security .section-subtitle {
+  color: #9ca3af;
 }
 
 .security-grid {
@@ -382,46 +573,44 @@
 .security-item h3 {
   font-size: 1.15rem;
   font-weight: 600;
-  color: var(--text-h);
+  color: #fff;
   margin: 0 0 8px;
 }
 
 .security-item p {
-  color: var(--text);
+  color: #9ca3af;
   line-height: 1.6;
   font-size: 0.9rem;
 }
 
 /* ── Testimonials ──────────────────────────────────── */
 #testimonials {
-  background: #000;
-}
-
-#testimonials .section-title {
-  color: #fff;
+  background: var(--bg);
 }
 
 .testimonials-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 32px;
-  max-width: 900px;
+  max-width: 1080px;
   margin: 48px auto 0;
 }
 
 .testimonial-card {
-  border: 1px solid #1f2937;
+  background: var(--code-bg);
+  border: 1px solid var(--border);
   border-radius: 16px;
   padding: 36px 32px;
-  transition: border-color 0.2s;
+  transition: border-color 0.2s, transform 0.2s;
 }
 
 .testimonial-card:hover {
   border-color: #7c3aed;
+  transform: translateY(-2px);
 }
 
 .testimonial-quote {
-  color: #d1d5db;
+  color: var(--text);
   font-size: 1.05rem;
   line-height: 1.7;
   font-style: italic;
@@ -435,7 +624,7 @@
 }
 
 .testimonial-author strong {
-  color: #fff;
+  color: var(--text-h);
   font-size: 0.95rem;
 }
 
@@ -446,7 +635,11 @@
 
 /* ── FAQ ───────────────────────────────────────────── */
 #faq {
-  background: var(--bg);
+  background: #000;
+}
+
+#faq .section-title {
+  color: #fff;
 }
 
 .faq-list {
@@ -458,7 +651,7 @@
 }
 
 .faq-item {
-  border: 1px solid var(--border);
+  border: 1px solid #1f2937;
   border-radius: 12px;
   overflow: hidden;
   transition: border-color 0.2s;
@@ -472,7 +665,7 @@
   padding: 20px 24px;
   font-size: 1.05rem;
   font-weight: 600;
-  color: var(--text-h);
+  color: #fff;
   cursor: pointer;
   list-style: none;
   display: flex;
@@ -498,7 +691,7 @@
 
 .faq-item p {
   padding: 0 24px 20px;
-  color: var(--text);
+  color: #9ca3af;
   line-height: 1.7;
   font-size: 0.95rem;
 }
@@ -575,6 +768,12 @@
   font-size: 0.85rem;
 }
 
+.footer-location {
+  color: #4b5563 !important;
+  font-size: 0.8rem !important;
+  margin-top: 4px;
+}
+
 .footer-nav {
   display: flex;
   gap: 64px;
@@ -645,9 +844,19 @@
     align-items: center;
   }
 
+  #trusted-by {
+    padding: 32px 20px;
+  }
+
+  .trusted-logos {
+    gap: 16px;
+  }
+
   #features,
+  #ecosystem,
   #industries,
   #how-it-works,
+  #why-mosaiqlabs,
   #security,
   #testimonials,
   #faq,
@@ -656,6 +865,10 @@
   }
 
   .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ecosystem-grid {
     grid-template-columns: 1fr;
   }
 
@@ -668,6 +881,10 @@
   }
 
   .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .comparison-grid {
     grid-template-columns: 1fr;
   }
 
