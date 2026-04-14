@@ -1,5 +1,6 @@
 import '../App.css'
 import { useTheme } from '../hooks/useTheme'
+import AnimatedGridBackground from '../components/AnimatedGridBackground'
 
 function Home() {
   const { theme, toggleTheme } = useTheme()
@@ -7,6 +8,7 @@ function Home() {
   return (
     <>
       <section id="landing">
+        <AnimatedGridBackground />
         <nav className="navbar">
           <div className="logo">MosaiqLabs</div>
           <div className="nav-links">
