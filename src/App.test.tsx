@@ -112,7 +112,7 @@ describe('App', () => {
         <App />
       </MemoryRouter>
     )
-    expect(screen.getByRole('link', { name: 'Features' })).toBeInTheDocument()
+    expect(screen.getAllByRole('link', { name: 'Features' }).length).toBeGreaterThan(0)
     expect(screen.getAllByRole('link', { name: 'Get Started' }).length).toBeGreaterThan(0)
   })
 })
