@@ -3,9 +3,9 @@ import { describe, it, expect } from 'vitest'
 import App from './App'
 
 describe('App', () => {
-  it('renders the welcome heading', () => {
+  it('renders the quote', () => {
     render(<App />)
-    expect(screen.getByText('Welcome to the project')).toBeInTheDocument()
+    expect(screen.getByText(/In the middle of difficulty lies opportunity/)).toBeInTheDocument()
   })
 
   it('renders the landing section', () => {
