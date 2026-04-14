@@ -1,57 +1,118 @@
 import { render, screen } from '@testing-library/react'
+import { MemoryRouter } from 'react-router'
 import { describe, it, expect } from 'vitest'
 import App from './App'
 
 describe('App', () => {
-  it('renders the hero headline', () => {
-    render(<App />)
+  it('renders the hero headline on the home page', () => {
+    render(
+      <MemoryRouter initialEntries={['/']}>
+        <App />
+      </MemoryRouter>
+    )
     const matches = screen.getAllByText(/actionable intelligence/)
     expect(matches.length).toBeGreaterThan(0)
   })
 
-  it('renders the landing section', () => {
-    render(<App />)
+  it('renders the landing section on the home route', () => {
+    render(
+      <MemoryRouter initialEntries={['/']}>
+        <App />
+      </MemoryRouter>
+    )
     expect(document.getElementById('landing')).toBeInTheDocument()
   })
 
-  it('renders the features section', () => {
-    render(<App />)
+  it('renders the features section on the home route', () => {
+    render(
+      <MemoryRouter initialEntries={['/']}>
+        <App />
+      </MemoryRouter>
+    )
     expect(document.getElementById('features')).toBeInTheDocument()
   })
 
-  it('renders the MosaiqLabs logo', () => {
-    render(<App />)
+  it('renders the MosaiqLabs logo on the home route', () => {
+    render(
+      <MemoryRouter initialEntries={['/']}>
+        <App />
+      </MemoryRouter>
+    )
     const logos = screen.getAllByText('MosaiqLabs')
     expect(logos.length).toBeGreaterThan(0)
   })
 
   it('renders the ecosystem section', () => {
-    render(<App />)
+    render(
+      <MemoryRouter initialEntries={['/']}>
+        <App />
+      </MemoryRouter>
+    )
     expect(document.getElementById('ecosystem')).toBeInTheDocument()
   })
 
   it('renders the security section', () => {
-    render(<App />)
+    render(
+      <MemoryRouter initialEntries={['/']}>
+        <App />
+      </MemoryRouter>
+    )
     expect(document.getElementById('security')).toBeInTheDocument()
   })
 
   it('renders the FAQ section', () => {
-    render(<App />)
+    render(
+      <MemoryRouter initialEntries={['/']}>
+        <App />
+      </MemoryRouter>
+    )
     expect(document.getElementById('faq')).toBeInTheDocument()
   })
 
   it('renders the testimonials section', () => {
-    render(<App />)
+    render(
+      <MemoryRouter initialEntries={['/']}>
+        <App />
+      </MemoryRouter>
+    )
     expect(document.getElementById('testimonials')).toBeInTheDocument()
   })
 
   it('renders the why-mosaiqlabs comparison section', () => {
-    render(<App />)
+    render(
+      <MemoryRouter initialEntries={['/']}>
+        <App />
+      </MemoryRouter>
+    )
     expect(document.getElementById('why-mosaiqlabs')).toBeInTheDocument()
   })
 
   it('renders the trusted-by section', () => {
-    render(<App />)
+    render(
+      <MemoryRouter initialEntries={['/']}>
+        <App />
+      </MemoryRouter>
+    )
     expect(document.getElementById('trusted-by')).toBeInTheDocument()
+  })
+
+  it('renders the about page when navigating to /about', () => {
+    render(
+      <MemoryRouter initialEntries={['/about']}>
+        <App />
+      </MemoryRouter>
+    )
+    expect(screen.getByRole('heading', { name: 'About' })).toBeInTheDocument()
+    expect(screen.getByText(/demo project powered by React and Vite/)).toBeInTheDocument()
+  })
+
+  it('renders landing page navigation links', () => {
+    render(
+      <MemoryRouter initialEntries={['/']}>
+        <App />
+      </MemoryRouter>
+    )
+    expect(screen.getAllByRole('link', { name: 'Features' }).length).toBeGreaterThan(0)
+    expect(screen.getAllByRole('link', { name: 'Get Started' }).length).toBeGreaterThan(0)
   })
 })
