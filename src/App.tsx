@@ -3,7 +3,12 @@ import './App.css'
 function App() {
   return (
     <section id="landing">
-      <h1>Welcome to the project</h1>
+      <blockquote>
+        <p className="quote">
+          "In the middle of difficulty lies opportunity."
+        </p>
+        <footer className="author">— Albert Einstein</footer>
+      </blockquote>
     </section>
   )
 }
