@@ -42,10 +42,10 @@ function AnimatedGridBackground() {
 
       // Get the current theme
       const isDark = document.documentElement.getAttribute('data-theme') === 'dark'
-      const lineColor = isDark ? 'rgba(124, 58, 237, 0.12)' : 'rgba(124, 58, 237, 0.08)'
-      const dotColor = isDark ? 'rgba(167, 139, 250, 0.3)' : 'rgba(124, 58, 237, 0.15)'
+      const lineColor = isDark ? 'rgba(167, 139, 250, 0.25)' : 'rgba(124, 58, 237, 0.1)'
+      const dotColor = isDark ? 'rgba(167, 139, 250, 0.5)' : 'rgba(124, 58, 237, 0.18)'
 
-      ctx.lineWidth = 0.5
+      ctx.lineWidth = isDark ? 1.5 : 1
 
       // Draw vertical lines with wave distortion
       for (let i = 0; i < cols; i++) {
