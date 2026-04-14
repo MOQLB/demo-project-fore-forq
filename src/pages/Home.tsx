@@ -1,5 +1,5 @@
 import '../App.css'
-import { useTheme } from '../context/ThemeContext'
+import { useTheme } from '../hooks/useTheme'
 
 function Home() {
   const { theme, toggleTheme } = useTheme()
