@@ -9,14 +9,14 @@
   left: 0;
   right: 0;
   z-index: 100;
-  background: rgba(0, 0, 0, 0.85);
+  background: var(--navbar-bg);
   backdrop-filter: blur(12px);
 }
 
 .logo {
   font-size: 1.4rem;
   font-weight: 700;
-  color: #fff;
+  color: var(--navbar-logo);
   letter-spacing: -0.5px;
 }
 
@@ -27,14 +27,14 @@
 }
 
 .nav-links a {
-  color: #aaa;
+  color: var(--navbar-text);
   text-decoration: none;
   font-size: 0.9rem;
   transition: color 0.2s;
 }
 
 .nav-links a:hover {
-  color: #fff;
+  color: var(--navbar-text-hover);
 }
 
 .nav-cta {
@@ -49,6 +49,26 @@
   background: #6d28d9 !important;
 }
 
+/* ── Theme Toggle ──────────────────────────────────── */
+.theme-toggle {
+  background: none;
+  border: 1px solid var(--border-alt);
+  border-radius: 8px;
+  padding: 6px 10px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  line-height: 1;
+  transition: border-color 0.2s, background 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.theme-toggle:hover {
+  border-color: #7c3aed;
+  background: rgba(124, 58, 237, 0.1);
+}
+
 /* ── Hero ───────────────────────────────────────────── */
 #landing {
   display: flex;
@@ -56,7 +76,7 @@
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background: #000;
+  background: var(--hero-bg);
   padding: 0 24px;
 }
 
@@ -82,7 +102,7 @@
   font-size: 3.5rem;
   font-weight: 700;
   line-height: 1.1;
-  color: #fff;
+  color: var(--hero-h1);
   margin: 0 0 24px;
   letter-spacing: -1.5px;
 }
@@ -96,7 +116,7 @@
 
 .hero-subtitle {
   font-size: 1.2rem;
-  color: #9ca3af;
+  color: var(--hero-subtitle);
   line-height: 1.7;
   margin: 0 0 40px;
   max-width: 620px;
@@ -116,7 +136,7 @@
   gap: 60px;
   margin-top: 64px;
   padding-top: 40px;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid var(--stat-border);
 }
 
 .stat {
@@ -127,28 +147,28 @@
   display: block;
   font-size: 2.2rem;
   font-weight: 700;
-  color: #a78bfa;
+  color: var(--stat-number);
   letter-spacing: -1px;
 }
 
 .stat-label {
   display: block;
   font-size: 0.85rem;
-  color: #6b7280;
+  color: var(--stat-label);
   margin-top: 4px;
 }
 
 /* ── Trusted By ────────────────────────────────────── */
 #trusted-by {
-  background: #000;
+  background: var(--trusted-bg);
   padding: 48px 48px;
   text-align: center;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  border-bottom: 1px solid var(--trusted-bottom-border);
 }
 
 .trusted-label {
   font-size: 0.85rem;
-  color: #6b7280;
+  color: var(--trusted-label);
   text-transform: uppercase;
   letter-spacing: 1.5px;
   font-weight: 500;
@@ -166,17 +186,17 @@
 .trusted-logo-item {
   font-size: 1rem;
   font-weight: 600;
-  color: #374151;
+  color: var(--trusted-item-color);
   letter-spacing: 0.5px;
   padding: 8px 20px;
-  border: 1px solid #1f2937;
+  border: 1px solid var(--trusted-item-border);
   border-radius: 8px;
   transition: color 0.2s, border-color 0.2s;
 }
 
 .trusted-logo-item:hover {
-  color: #9ca3af;
-  border-color: #374151;
+  color: var(--text-alt);
+  border-color: var(--text-alt);
 }
 
 /* ── Buttons ────────────────────────────────────────── */
@@ -203,13 +223,13 @@
 
 .btn-secondary {
   background: transparent;
-  color: #d1d5db;
-  border: 1px solid #374151;
+  color: var(--text-alt);
+  border: 1px solid var(--border-alt);
 }
 
 .btn-secondary:hover {
-  border-color: #9ca3af;
-  color: #fff;
+  border-color: var(--text-alt);
+  color: var(--text-alt-h);
 }
 
 .btn-large {
@@ -294,15 +314,15 @@
 
 /* ── Ecosystem ─────────────────────────────────────── */
 #ecosystem {
-  background: #000;
+  background: var(--bg-alt);
 }
 
 #ecosystem .section-title {
-  color: #fff;
+  color: var(--text-alt-h);
 }
 
 .ecosystem-subtitle {
-  color: #9ca3af;
+  color: var(--text-alt);
 }
 
 .ecosystem-grid {
@@ -314,7 +334,7 @@
 }
 
 .ecosystem-card {
-  border: 1px solid #1f2937;
+  border: 1px solid var(--border-alt);
   border-radius: 16px;
   padding: 36px 28px;
   text-align: left;
@@ -332,14 +352,14 @@
 }
 
 .ecosystem-card h3 {
-  color: #fff;
+  color: var(--text-alt-h);
   font-size: 1.15rem;
   font-weight: 600;
   margin: 0 0 8px;
 }
 
 .ecosystem-card p {
-  color: #9ca3af;
+  color: var(--text-alt);
   line-height: 1.6;
   font-size: 0.9rem;
 }
@@ -395,15 +415,15 @@
 
 /* ── How It Works ───────────────────────────────────── */
 #how-it-works {
-  background: #000;
+  background: var(--bg-alt);
 }
 
 #how-it-works .section-title {
-  color: #fff;
+  color: var(--text-alt-h);
 }
 
 #how-it-works .section-subtitle {
-  color: #9ca3af;
+  color: var(--text-alt);
 }
 
 .steps {
@@ -447,12 +467,12 @@
 .step h3 {
   font-size: 1.1rem;
   font-weight: 600;
-  color: #fff;
+  color: var(--step-h3);
   margin: 0 0 8px;
 }
 
 .step p {
-  color: #9ca3af;
+  color: var(--step-text);
   line-height: 1.6;
   font-size: 0.9rem;
 }
@@ -541,15 +561,15 @@
 
 /* ── Security ──────────────────────────────────────── */
 #security {
-  background: #000;
+  background: var(--bg-alt);
 }
 
 #security .section-title {
-  color: #fff;
+  color: var(--text-alt-h);
 }
 
 #security .section-subtitle {
-  color: #9ca3af;
+  color: var(--text-alt);
 }
 
 .security-grid {
@@ -573,12 +593,12 @@
 .security-item h3 {
   font-size: 1.15rem;
   font-weight: 600;
-  color: #fff;
+  color: var(--text-alt-h);
   margin: 0 0 8px;
 }
 
 .security-item p {
-  color: #9ca3af;
+  color: var(--text-alt);
   line-height: 1.6;
   font-size: 0.9rem;
 }
@@ -635,11 +655,11 @@
 
 /* ── FAQ ───────────────────────────────────────────── */
 #faq {
-  background: #000;
+  background: var(--bg-alt);
 }
 
 #faq .section-title {
-  color: #fff;
+  color: var(--text-alt-h);
 }
 
 .faq-list {
@@ -651,7 +671,7 @@
 }
 
 .faq-item {
-  border: 1px solid #1f2937;
+  border: 1px solid var(--border-alt);
   border-radius: 12px;
   overflow: hidden;
   transition: border-color 0.2s;
@@ -665,7 +685,7 @@
   padding: 20px 24px;
   font-size: 1.05rem;
   font-weight: 600;
-  color: #fff;
+  color: var(--faq-summary);
   cursor: pointer;
   list-style: none;
   display: flex;
@@ -691,14 +711,14 @@
 
 .faq-item p {
   padding: 0 24px 20px;
-  color: #9ca3af;
+  color: var(--faq-text);
   line-height: 1.7;
   font-size: 0.95rem;
 }
 
 /* ── CTA ────────────────────────────────────────────── */
 #cta {
-  background: linear-gradient(135deg, #1a0533, #0f0f23);
+  background: var(--cta-bg);
   text-align: center;
 }
 
@@ -708,7 +728,7 @@
 }
 
 .cta-content h2 {
-  color: #fff;
+  color: var(--cta-h2);
   font-size: 2.4rem;
   font-weight: 700;
   margin: 0 0 16px;
@@ -716,7 +736,7 @@
 }
 
 .cta-content p {
-  color: #9ca3af;
+  color: var(--cta-text);
   font-size: 1.1rem;
   line-height: 1.6;
   margin-bottom: 36px;
@@ -737,8 +757,8 @@
 
 /* ── Footer ─────────────────────────────────────────── */
 .site-footer {
-  background: #000;
-  border-top: 1px solid #1f2937;
+  background: var(--footer-bg);
+  border-top: 1px solid var(--footer-border);
   padding: 48px 48px 32px;
 }
 
@@ -761,15 +781,16 @@
 .footer-brand .logo {
   font-size: 1.2rem;
   margin-bottom: 4px;
+  color: var(--footer-heading);
 }
 
 .footer-brand p {
-  color: #6b7280;
+  color: var(--footer-text);
   font-size: 0.85rem;
 }
 
 .footer-location {
-  color: #4b5563 !important;
+  color: var(--footer-bottom-text) !important;
   font-size: 0.8rem !important;
   margin-top: 4px;
 }
@@ -786,7 +807,7 @@
 }
 
 .footer-col h4 {
-  color: #fff;
+  color: var(--footer-heading);
   font-size: 0.85rem;
   font-weight: 600;
   text-transform: uppercase;
@@ -795,24 +816,24 @@
 }
 
 .footer-col a {
-  color: #9ca3af;
+  color: var(--footer-link);
   text-decoration: none;
   font-size: 0.9rem;
   transition: color 0.2s;
 }
 
 .footer-col a:hover {
-  color: #fff;
+  color: var(--footer-link-hover);
 }
 
 .footer-bottom {
-  border-top: 1px solid #1f2937;
+  border-top: 1px solid var(--footer-border);
   padding-top: 24px;
   text-align: center;
 }
 
 .footer-bottom p {
-  color: #4b5563;
+  color: var(--footer-bottom-text);
   font-size: 0.8rem;
 }
 
@@ -828,6 +849,10 @@
 
   .nav-links a:not(.nav-cta) {
     display: none;
+  }
+
+  .theme-toggle {
+    order: -1;
   }
 
   .hero h1 {
