@@ -5,9 +5,9 @@ function App() {
     <section id="landing">
       <blockquote>
         <p className="quote">
-          "The only way to do great work is to love what you do."
+          "In the middle of difficulty lies opportunity."
         </p>
-        <footer className="author">— Steve Jobs</footer>
+        <footer className="author">— Albert Einstein</footer>
       </blockquote>
     </section>
   )
