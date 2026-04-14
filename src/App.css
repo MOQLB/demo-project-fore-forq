@@ -152,6 +152,7 @@
 #features,
 #industries,
 #how-it-works,
+#security,
 #cta {
   padding: 100px 48px;
 }
@@ -227,12 +228,21 @@
   color: #fff;
 }
 
+.industries-subtitle {
+  color: #9ca3af;
+}
+
 .industries-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
   max-width: 960px;
   margin: 48px auto 0;
+}
+
+.industry-icon {
+  font-size: 2rem;
+  margin-bottom: 12px;
 }
 
 .industry-card {
@@ -332,6 +342,42 @@
   margin-bottom: 36px;
 }
 
+/* ── Security ──────────────────────────────────────── */
+#security {
+  background: var(--bg);
+}
+
+.security-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.security-item {
+  text-align: center;
+  padding: 32px 24px;
+}
+
+.security-icon {
+  font-size: 2.4rem;
+  margin-bottom: 16px;
+}
+
+.security-item h3 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text-h);
+  margin: 0 0 8px;
+}
+
+.security-item p {
+  color: var(--text);
+  line-height: 1.6;
+  font-size: 0.9rem;
+}
+
 /* ── Footer ─────────────────────────────────────────── */
 .site-footer {
   background: #000;
@@ -357,6 +403,24 @@
 .footer-brand p {
   color: #6b7280;
   font-size: 0.85rem;
+}
+
+.footer-links {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.footer-links a {
+  color: #9ca3af;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.2s;
+}
+
+.footer-links a:hover {
+  color: #fff;
 }
 
 .footer-bottom p {
@@ -389,8 +453,13 @@
   #features,
   #industries,
   #how-it-works,
+  #security,
   #cta {
     padding: 60px 20px;
+  }
+
+  .security-grid {
+    grid-template-columns: 1fr;
   }
 
   .features-grid {

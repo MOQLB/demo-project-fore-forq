@@ -5,7 +5,7 @@ import App from './App'
 describe('App', () => {
   it('renders the hero headline', () => {
     render(<App />)
-    expect(screen.getByText(/production-ready AI/)).toBeInTheDocument()
+    expect(screen.getByText(/actionable intelligence/)).toBeInTheDocument()
   })
 
   it('renders the landing section', () => {
